@@ -1,1 +1,23 @@
-<p>gift-entry works!</p>
+<form [formGroup]="form"
+      (ngSubmit)="add()">
+  <div class="form-group">
+    <label for="for">For</label>
+    <input name="for"
+           formControlName="for"
+           class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="holiday">Holiday</label>
+    <input name="holiday"
+           formControlName="holiday"
+           class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="suggestions">Suggestions</label>
+    <textarea name="suggestions"
+              formControlName="suggestions"
+              class="form-control"></textarea>
+  </div>
+  <button type="submit"
+          class="btn btn-success">Add This Person</button>
+</form>
