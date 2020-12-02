@@ -8,3 +8,10 @@ $theme-colors:(
 );
 
 @import "../node_modules/bootstrap/scss/bootstrap";
+
+
+.debug{
+  background-color: black;
+  color: green;
+  border: 10px solid red;
+}

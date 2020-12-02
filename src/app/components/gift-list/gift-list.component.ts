@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { GiftItem } from 'src/app/models';
 
 @Component({
@@ -8,10 +8,7 @@ import { GiftItem } from 'src/app/models';
 })
 export class GiftListComponent implements OnInit {
 
-  items: GiftItem[] = [
-    { for: 'Amy', holiday: 'Christmas', suggestions: 'Books and Movies' },
-    { for: 'Sean', holiday: 'Kwanzaa', suggestions: 'Meat Things' }
-  ];
+  @Input() items: GiftItem[] | null = [];
   constructor() { }
 
   ngOnInit(): void {
