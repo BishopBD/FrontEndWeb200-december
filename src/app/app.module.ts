@@ -14,6 +14,7 @@ import { CountByComponent } from './components/count-by/count-by.component';
 import { EffectsModule } from '@ngrx/effects';
 import { CounterEffects } from './effects/counter.effects';
 import { GiftFeatureModule } from './features/gift-feature/gift-feature.module';
+import { ErrorDisplayComponent } from './components/error-display/error-display.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { GiftFeatureModule } from './features/gift-feature/gift-feature.module';
     DashboardComponent,
     CounterComponent,
     NavComponent,
-    CountByComponent
+    CountByComponent,
+    ErrorDisplayComponent
   ],
   imports: [
     BrowserModule,

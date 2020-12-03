@@ -1,7 +1,7 @@
 <div class="card"
      *ngFor="let item of items">
   <div class="card-body">
-    <h5 class="card-body">For {{item.for}}</h5>
+    <h5 class="card-body">For {{item.for}} <span *ngIf="item.isTemp"><em>(saving your stuff)</em></span></h5>
     <h6 class="card-subtitle mb-2 text-muted">{{item.for}} Celebrates {{item.holiday}}</h6>
     <p class="card-text">They like {{ item.suggestions }}</p>
   </div>

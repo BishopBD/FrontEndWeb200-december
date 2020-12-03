@@ -1,6 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { AbstractControl, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { GiftItem } from '../../models';
+import { GiftCreate, GiftItem } from '../../models';
 
 @Component({
   selector: 'app-gift-entry',
@@ -14,7 +14,7 @@ export class GiftEntryComponent implements OnInit {
   form!: FormGroup;
   hasErrors = false;
 
-  @Output() itemAdded = new EventEmitter<GiftItem>();
+  @Output() itemAdded = new EventEmitter<GiftCreate>();
   ngOnInit(): void {
     this.form = this.formBuilder.group({
       for: new FormControl('', [Validators.required]),

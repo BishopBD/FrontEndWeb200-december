@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import { GiftItem } from '../../models';
+import { giftAdded } from '../../actions/gift.actions';
+import { GiftCreate, GiftItem } from '../../models';
+import { GiftFeatureState, selectGiftItems } from '../../reducers';
 import { GiftDataService } from '../../services/gift-data.service';
 
 @Component({
@@ -11,14 +14,16 @@ import { GiftDataService } from '../../services/gift-data.service';
 export class GiftGivingComponent implements OnInit {
 
   data$!: Observable<GiftItem[]>;
-  constructor(private service: GiftDataService) { }
+  constructor(private store: Store<GiftFeatureState>) { }
 
   ngOnInit(): void {
-    this.data$ = this.service.getGiftData();
+    this.data$ = this.store.pipe(
+      select(selectGiftItems)
+    );
   }
 
-  onItemAdded(item: GiftItem): void {
-    this.service.addItem(item);
+  onItemAdded(gift: GiftCreate): void {
+    this.store.dispatch(giftAdded({ gift }));
   }
 
 }
