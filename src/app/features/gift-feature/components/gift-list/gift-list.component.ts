@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { GiftItem } from 'src/app/models';
+import { GiftItem } from '../../models';
 
 @Component({
   selector: 'app-gift-list',

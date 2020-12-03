@@ -1,11 +1,11 @@
-import { createSelector } from '@ngrx/store';
+import { ActionReducerMap, createSelector } from '@ngrx/store';
 import * as fromCounter from './counter.reducer';
 
 export interface AppState {
   counter: fromCounter.CounterState;
 }
 
-export const reducers = {
+export const reducers: ActionReducerMap<AppState> = {
   counter: fromCounter.reducer
 };
 

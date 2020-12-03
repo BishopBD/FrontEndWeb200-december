@@ -1,6 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { AbstractControl, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { GiftItem } from 'src/app/models';
+import { GiftItem } from '../../models';
 
 @Component({
   selector: 'app-gift-entry',

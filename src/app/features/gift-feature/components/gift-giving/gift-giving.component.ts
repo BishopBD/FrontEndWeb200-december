@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { GiftItem } from 'src/app/models';
-import { GiftDataService } from 'src/app/services/gift-data.service';
+import { GiftItem } from '../../models';
+import { GiftDataService } from '../../services/gift-data.service';
 
 @Component({
   selector: 'app-gift-giving',
