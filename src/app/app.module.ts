@@ -14,6 +14,7 @@ import { CountByComponent } from './components/count-by/count-by.component';
 import { EffectsModule } from '@ngrx/effects';
 import { CounterEffects } from './effects/counter.effects';
 import { GiftFeatureModule } from './features/gift-feature/gift-feature.module';
+import { MediaLibraryModule } from './features/media-library/media-library.module';
 import { ErrorDisplayComponent } from './components/error-display/error-display.component';
 
 
@@ -29,6 +30,7 @@ import { ErrorDisplayComponent } from './components/error-display/error-display.
   imports: [
     BrowserModule,
     GiftFeatureModule,
+    MediaLibraryModule,
     AppRoutingModule,
     ReactiveFormsModule,
     StoreModule.forRoot(reducers),
